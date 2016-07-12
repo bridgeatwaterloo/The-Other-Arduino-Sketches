@@ -1,7 +1,7 @@
 
-int led= 13; /* declare pin */
-int brightness= 0;
-int fadeAmount= 5;
+int led = 6; /* declare pin */
+int brightness = 0; /* set initial brightness level */
+int fadeAmount = 5; /* set initial fadeAmount */
 
 void setup() {
   // put your setup code here, to run once:
@@ -10,7 +10,12 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
-  analogWrite(13, brightness);
-  brightness = brightness + 3;
+  analogWrite(led, brightness);
+  brightness = brightness +fadeAmount;
+
+  if (brightness <= 0 || brightness >= 255) {
+    fadeAmount = -fadeAmount; 
+    }
+    
   delay(50);
 }
