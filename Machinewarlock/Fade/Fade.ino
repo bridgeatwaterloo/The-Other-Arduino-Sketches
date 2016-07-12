@@ -8,6 +8,7 @@ int fadeAmount = 5;   /* The value in which the LED should fade by */
 
 void setup() {
   pinMode(led, OUTPUT);
+  Serial.begin(9600);
 }
 
 /* This is the setup for the LED and what it is doing */
@@ -15,6 +16,9 @@ void setup() {
 void loop() {
   analogWrite(led, brightness);
   /* This is the initial brightness of the LED */
+  
+  Serial.print(brightness);
+  Serial.print('\n');
   
   brightness = brightness + fadeAmount;
   /* This is loop that increases the brightness */
