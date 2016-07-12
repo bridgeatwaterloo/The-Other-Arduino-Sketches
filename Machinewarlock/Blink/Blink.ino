@@ -1,4 +1,4 @@
-/* This sketch meets the acceptance criteria of of this task https://trello.com/c/ba783WmU/2-blink-an-led */
+/* This sketch meets the acceptance criteria of this task https://trello.com/c/ba783WmU/2-blink-an-led */
 
 int pin = 9;
 
