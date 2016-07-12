@@ -10,8 +10,9 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
-  digitalWrite(13, HIGH); /* Turns light on*/
+  digitalWrite(13, HIGH); /* Turns light on */
   delay(4000); /* 4 second delay */
   digitalWrite(13, LOW); /*Light off */
   delay(4000); /* 4 second delay */
+  
 }
