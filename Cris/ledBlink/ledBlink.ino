@@ -1,9 +1,8 @@
-//declare the variable: my pin numbet is 11
+//declare the variable: my pin number is 11
 int led = 11;           
 
 //declare the function that will set the pin to output mode
 void setup() {
-   
    pinMode(led, OUTPUT);
 }
 //declare a function that will run a loop 

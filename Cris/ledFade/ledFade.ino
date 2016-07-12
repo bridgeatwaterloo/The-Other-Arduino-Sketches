@@ -6,18 +6,19 @@ int brightness = 0;
 
 //declare the function that will set the pin to output mode
 void setup() {
-   
-   pinMode(led, OUTPUT);
+  pinMode(led, OUTPUT);
+  Serial.begin(9600);  
 }
 //declare a function that will run a loop 
 void loop() {
    analogWrite(led, brightness); 
-   brightness +=  fadeAmount;
-   if (brightness<=0 || brightness >=255){
-   fadeAmount =-fadeAmount;
+   brightness += fadeAmount;
+   if (brightness <= 0 || brightness >= 255){
+   fadeAmount =- fadeAmount;
+   Serial.print(brightness);
+   Serial.print("blah\n");
    }
    delay (30); 
-   
    }
 
 
