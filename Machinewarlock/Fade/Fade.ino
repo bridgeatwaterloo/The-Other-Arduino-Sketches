@@ -8,7 +8,7 @@ int fadeAmount = 5;   /* The value in which the LED should fade by */
 
 void setup() {
   pinMode(led, OUTPUT);
-  Serial.begin(9600);
+  Serial.begin(9600); /* This is the code that starts the Serial Monitor Tool */
 }
 
 /* This is the setup for the LED and what it is doing */
@@ -17,11 +17,11 @@ void loop() {
   analogWrite(led, brightness);
   /* This is the initial brightness of the LED */
   
-  Serial.print(brightness);
-  Serial.print('\n');
+  Serial.print(brightness); /* This is the code that specifies the variable the Serial Monitor Tool is targetting */
+  Serial.print('\n');       /* This is the code that allows a new line for results in the Serial Monitor Tool     */
   
   brightness = brightness + fadeAmount;
-  /* This is loop that increases the brightness */
+  /* This is command that increases the brightness */
   
   if (brightness <= 0 || brightness >= 255){
     fadeAmount = -fadeAmount;
